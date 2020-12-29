@@ -19,8 +19,8 @@ public class Controller {
 		return "Hello World!";
 	}
 	
-	@GetMapping("/{nombre}")
-	public String saludoEspecial(@PathVariable(name="nombre") String name) {
+	@GetMapping("/{name}")
+	public String parameterGreeting(@PathVariable(name="name") String name) {
 	    return basicService.parameterGreeting(name);
 	}
 	
