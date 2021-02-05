@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "b8584ef9-60ca-490f-9cee-50a72a94869f",
+		"name": "Fase3",
+		"description": "Collection of \"local\" environment requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{IP}}:{{port}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IP}}:{{port}}",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}"
+				},
+				"description": "GET request without name parameter"
+			},
+			"response": []
+		},
+		{
+			"name": "{{IP}}:{{port}}/Blamak",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IP}}:{{port}}/Blamak",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"Blamak"
+					]
+				},
+				"description": "GET request with @PathVariable"
+			},
+			"response": []
+		},
+		{
+			"name": "{{IP}}:{{port}}/hello?name=Blamak",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{IP}}:{{port}}/hello?name=Blamak",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"hello"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Blamak"
+						}
+					]
+				},
+				"description": "GET request with @RequestParam"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
