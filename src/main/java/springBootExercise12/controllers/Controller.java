@@ -10,24 +10,23 @@ import springBootExercise12.services.BasicService;
 
 @RestController
 public class Controller {
-	
+
 	@Autowired
 	BasicService basicService;
-	
+
 	@GetMapping("/")
 	public String defaultGreeting() {
-		return "Hello World!";
+		return basicService.defaultGreeting();
 	}
-	
+
 	@GetMapping("/{name}")
-	public String parameterGreeting(@PathVariable(name="name") String name) {
-	    return basicService.parameterGreeting(name);
+	public String parameterGreeting(@PathVariable(name = "name") String name) {
+		return basicService.parameterGreeting(name);
 	}
-	
+
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-	return basicService.hello(name);
+		return basicService.hello(name);
 	}
-	
 
 }
